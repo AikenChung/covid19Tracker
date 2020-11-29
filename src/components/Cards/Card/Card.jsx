@@ -2,11 +2,14 @@ import React from 'react';
 import { Card, CardContent, Typography, Grid } from '@material-ui/core';
 import CountUp from 'react-countup';
 import cx from 'classnames';
+import styled from 'styled-components';
 
-import styles from './Card.module.css';
+const StyledCard = styled(Card)`
+margin: 0 2% !important;
+`;
 
 const CardComponent = ({ className, cardTitle, value, lastUpdate, cardSubtitle }) => (
-  <Grid item xs={12} md={3} component={Card} className={cx(styles.card, className)}>
+  <Grid item xs={12} md={3} component={Card} className={cx(StyledCard, className)}>
     <CardContent>
       <Typography color="textSecondary" gutterBottom>
         {cardTitle}
