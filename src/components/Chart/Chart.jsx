@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Line, Bar } from 'react-chartjs-2';
-
+import styled from 'styled-components';
 import { fetchDailyData } from '../../api';
 
-import styled from 'styled-components';
+
 
 const Div = styled.div`
     display: flex;
@@ -73,7 +73,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   );
 
   return (
-    <Div className={styles.container}>
+    <Div >
       {country ? barChart : lineChart}
     </Div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Card, CountryPicker, Chart} from './components';
-import { fetchData } from './api/';
+import { Cards, CountryPicker, Chart} from './components';
+import { fetchData } from './api';
 import image from './images/image.png';
 import styled from 'styled-components';
 
@@ -18,7 +18,7 @@ const Img = styled.img`
 class App extends React.Component{
   state = {
     data:{},
-    country:''
+    country:'',
   }
 
   async componentDidMount(){
@@ -32,10 +32,10 @@ class App extends React.Component{
   }
 
   render(){
-    const { data, country} = thhis.state;
+    const { data, country} = this.state;
     return(
       <Div>
-        <img className='covidImg' src={image} alt="COVID-19" />
+        <Img src={image} alt="COVID-19" />
         <Cards data = {data} />
         < CountryPicker handleCountryChange={this.handleCountryChange}/>
         <Chart data={ data } country={country} />
