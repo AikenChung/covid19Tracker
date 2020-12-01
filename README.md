@@ -1,3 +1,5 @@
+This is an hands-on practicing project based on the repo: github.com/adrianhajdin/project_corona_tracker
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
